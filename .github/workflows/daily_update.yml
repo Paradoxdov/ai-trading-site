@@ -37,6 +37,6 @@ jobs:
       run: |
         git config --global user.name 'AI Admin'
         git config --global user.email 'ai-admin@users.noreply.github.com'
-        git add public/posts/*.html public/index.html public/assets/css/ai_theme.css
+        git add docs/posts/*.html docs/index.html docs/assets/css/ai_theme.css
         git commit -m "AI Admin: Daily Content Update & Design Evolution" || echo "No changes to commit"
         git push

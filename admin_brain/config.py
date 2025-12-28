@@ -44,7 +44,7 @@ SAFETY_SETTINGS = [
 
 # Paths
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PUBLIC_DIR = os.path.join(BASE_DIR, "public")
+PUBLIC_DIR = os.path.join(BASE_DIR, "docs")
 POSTS_DIR = os.path.join(PUBLIC_DIR, "posts")
 ASSETS_DIR = os.path.join(PUBLIC_DIR, "assets")
 CSS_DIR = os.path.join(ASSETS_DIR, "css")
