@@ -18,24 +18,31 @@ class Designer:
         with open(self.css_path, "r") as f:
             current_css = f.read()
 
-        # Thesis - Antithesis - Synthesis Loop
+        # Thesis - Antithesis - Synthesis Loop (PREMIUM EDITION)
         prompt = f"""
-        You are the AI Creative Director. Your task is to EVOLVE the website's theme.
+        You are the AI Creative Director for a high-end algorithmic trading fund.
+        Your task is to EVOLVE the website's theme for a "Work of Art" dark mode interface.
         
         CURRENT CSS:
         ```css
         {current_css}
         ```
         
+        GOAL:
+        Create a sophisticated, dark, premium color palette.
+        Think: "Obsidian", "Midnight Blue", "Deep Emerald", "Electric Violet".
+        The background MUST be dark (nearly black).
+        The accent color must be sharp and neon for high contrast.
+        
         PROCESS:
-        1. THESIS: Propose a new color palette or typo adjustment based on a "Trading Vibe" (e.g., Bull Market Green, Bear Market Red, Volatility Purple).
-        2. ANTITHESIS: Critique the current CSS (is it too boring? too bright?).
+        1. THESIS: Define a mood (e.g. "Liquid Gold on Black").
+        2. ANTITHESIS: Ensure it's legible and not too chaotic.
         3. SYNTHESIS: Output the COMPLETE new CSS file content. 
         
         RULES:
         - KEEP the variable names exactly the same (--bg-color, --text-color, --accent-color, --secondary-color).
-        - ONLY change the values of the variables.
-        - You can slightly adjust other rules, but do not break the layout.
+        - --bg-color should be very dark (e.g. #050505, #0a0a0b).
+        - --secondary-color should be slightly lighter (glass effect base).
         - Return ONLY the CSS code block.
         """
         
