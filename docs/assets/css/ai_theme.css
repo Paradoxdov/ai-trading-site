@@ -4,16 +4,16 @@
 */
 
 /*
-THESIS: "Liquid Emerald on Obsidian" - High contrast, sharp, and luxurious.
-ANTITHESIS: Ensure legibility and avoid overwhelming the user with too much vibrant color. Balance the emerald with darker tones.
+THESIS: "Electric Violet on Obsidian Depths" - Sharp contrast, mysterious, and high-tech.
+ANTITHESIS: Avoid eye strain by balancing the intensity of the violet with muted greys and deep blues.
 */
 
 :root {
-    /* Base Colors - Thesis: Liquid Emerald on Obsidian */
-    --bg-color: #0a0a0b; /* Near Black */
-    --text-color: #f0f0f0; /* Light Grey */
-    --accent-color: #2bffc6; /* Electric Emerald */
-    --secondary-color: #141e1a; /* Darker Emerald for contrast */
+    /* Base Colors - Thesis: Electric Violet on Obsidian Depths */
+    --bg-color: #050505; /* Deepest Black */
+    --text-color: #d0d0d0; /* Soft Grey */
+    --accent-color: #c77dff; /* Electric Violet */
+    --secondary-color: #0e1117; /* Dark Blue-Grey for subtle contrast */
 
     /* Typography */
     --header_font: 'Inter', sans-serif;
@@ -37,11 +37,11 @@ body {
 
 .post-card {
     background-color: var(--secondary-color);
-    border-color: #444;
+    border-color: #333;
 }
 
 .post-image-placeholder {
-    background: linear-gradient(45deg, #1a332b, #2a433d);
+    background: linear-gradient(45deg, #171a26, #1e212d);
 }
 
 a {

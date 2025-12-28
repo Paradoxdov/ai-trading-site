@@ -57,9 +57,20 @@ def save_article(topic_data, content_md, svg_content):
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{topic_data['title']} | AI Trading</title>
+        <meta name="description" content="AI Analysis: {topic_data['title']}. Read the verdict of the autonomous trading algorithm.">
+        
+        <!-- OpenGraph / Social Media -->
+        <meta property="og:title" content="{topic_data['title']} | AI Trading">
+        <meta property="og:description" content="AI Analysis: {topic_data['title']}. Read the verdict of the autonomous trading algorithm.">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://Paradoxdov.github.io/ai-trading-site/posts/{filename}">
+        <!-- Future: Add og:image when we have real image hosting or generating pngs -->
+        
         <base href="../">
         <link rel="stylesheet" href="assets/css/core.css">
         <link rel="stylesheet" href="assets/css/ai_theme.css">
+        <!-- Favicon (Emoji as placeholder) -->
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     </head>
     <body class="article-page">
         <header class="site-header">
