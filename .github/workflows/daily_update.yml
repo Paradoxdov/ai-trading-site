@@ -1,0 +1,42 @@
+name: Daily AI Admin Routine
+
+on:
+  schedule:
+    # Run every day at 08:00 UTC
+    - cron: '0 8 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  ai_admin_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run AI Admin Brain
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      run: |
+        python -m admin_brain.main
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name 'AI Admin'
+        git config --global user.email 'ai-admin@users.noreply.github.com'
+        git add public/posts/*.html public/index.html public/assets/css/ai_theme.css
+        git commit -m "AI Admin: Daily Content Update & Design Evolution" || echo "No changes to commit"
+        git push

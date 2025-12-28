@@ -1,0 +1,54 @@
+/* AI GENERATED THEME
+   This file is fully managed by the AI Designer agent.
+   It controls colors, fonts variables, and visual flair.
+*/
+
+/*
+THESIS: "Volatility Purple" - Reflecting the unpredictable nature of trading.
+ANTITHESIS: Current theme is a bit too clean and clinical. Needs more depth and a slightly more aggressive accent color. The grey secondary color is bland.
+*/
+
+:root {
+    /* Base Colors - Thesis: Volatility Purple */
+    --bg-color: #120a2a; /* Dark Purple */
+    --text-color: #f0f0f0; /* Lighter, more readable grey */
+    --accent-color: #ff6bff; /* Electric Purple */
+    --secondary-color: #1e1435; /* Deeper purple for contrast */
+
+    /* Typography */
+    --header_font: 'Inter', sans-serif;
+    --code-font: 'JetBrains Mono', monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.logo {
+    font-family: var(--code-font);
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+.post-card {
+    background-color: var(--secondary-color);
+    border-color: #444;
+}
+
+.post-image-placeholder {
+    background: linear-gradient(45deg, #281a4d, #382a5d);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
